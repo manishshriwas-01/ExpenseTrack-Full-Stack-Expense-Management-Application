@@ -1,4 +1,4 @@
-# ExpenseTrack — Full-Stack Expense Management Application
+
 
 ExpenseTrack is a full-stack expense management application that allows users
 to securely manage and track their personal expenses.
@@ -62,3 +62,6 @@ Controllers
 Models
    ↓
 MongoDB Atlas
+=======
+# ExpenseTrack-Full-Stack-Expense-Management-Application
+>>>>>>> 91ca5b1026ac9db2ada6127aa5c8b66e7143d035
