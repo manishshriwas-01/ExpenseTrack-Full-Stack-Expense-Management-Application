@@ -64,7 +64,7 @@ Models
 MongoDB Atlas
 =======
 ---
-# Day 2 — Backend Expense APIs
+##Day 2 — Backend Expense APIs
 
 Today, I completed the core Expense Management backend for ExpenseTrack.
 
