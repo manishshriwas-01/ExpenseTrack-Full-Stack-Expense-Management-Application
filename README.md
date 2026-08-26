@@ -63,5 +63,28 @@ Models
    ↓
 MongoDB Atlas
 =======
-# ExpenseTrack-Full-Stack-Expense-Management-Application
->>>>>>> 91ca5b1026ac9db2ada6127aa5c8b66e7143d035
+---
+# Day 2 — Backend Expense APIs
+
+Today, I completed the core Expense Management backend for ExpenseTrack.
+
+## Completed
+
+- Created Expense CRUD APIs
+- Create Expense
+- Get All Expenses
+- Get Single Expense
+- Update Expense
+- Delete Expense
+- Added JWT protected expense routes
+- Linked each expense with the logged-in user
+- Tested APIs using Postman
+- Verified user-specific expense access
+
+## API Routes
+
+- `POST /api/expenses`
+- `GET /api/expenses`
+- `GET /api/expenses/:id`
+- `PUT /api/expenses/:id`
+- `DELETE /api/expenses/:id`
