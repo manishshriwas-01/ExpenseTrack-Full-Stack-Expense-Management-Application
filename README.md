@@ -1,11 +1,11 @@
+# ExpenseTrack — Full-Stack Expense Management Application
 
-
-ExpenseTrack is a full-stack expense management application that allows users
-to securely manage and track their personal expenses.
+ExpenseTrack is a full-stack expense management application that allows users to securely manage and track their personal expenses.
 
 ## Tech Stack
 
 ### Frontend
+
 - Angular
 - TypeScript
 - HTML
@@ -13,6 +13,7 @@ to securely manage and track their personal expenses.
 - RxJS
 
 ### Backend
+
 - Node.js
 - Express.js
 - Mongoose
@@ -20,6 +21,7 @@ to securely manage and track their personal expenses.
 - bcrypt
 
 ### Database
+
 - MongoDB Atlas
 
 ---
@@ -62,13 +64,13 @@ Controllers
 Models
    ↓
 MongoDB Atlas
-=======
----
-##Day 2 — Backend Expense APIs
+
+
+## Day 2 — Backend Expense APIs
 
 Today, I completed the core Expense Management backend for ExpenseTrack.
 
-## Completed
+### Completed
 
 - Created Expense CRUD APIs
 - Create Expense
@@ -81,7 +83,7 @@ Today, I completed the core Expense Management backend for ExpenseTrack.
 - Tested APIs using Postman
 - Verified user-specific expense access
 
-## API Routes
+### API Routes
 
 - `POST /api/expenses`
 - `GET /api/expenses`
