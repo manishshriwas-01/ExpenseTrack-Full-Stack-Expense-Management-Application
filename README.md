@@ -50,20 +50,7 @@ This project is being developed as a 4-day capstone project.
 - Protected authentication route
 - Authentication testing with Postman
 
-### Backend Architecture
 
-```text
-Client
-   ↓
-Express Server
-   ↓
-Routes
-   ↓
-Controllers
-   ↓
-Models
-   ↓
-MongoDB Atlas
 
 
 ## Day 2 — Backend Expense APIs
