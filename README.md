@@ -77,3 +77,17 @@ Today, I completed the core Expense Management backend for ExpenseTrack.
 - `GET /api/expenses/:id`
 - `PUT /api/expenses/:id`
 - `DELETE /api/expenses/:id`
+
+
+
+## Day 3 — Angular UI & API Integration
+
+Today I worked on:
+
+- Built Angular UI components.
+- Created and integrated Angular services.
+- Used HttpClient for API communication.
+- Implemented Angular routing and navigation.
+- Added Functional AuthGuard for protected routes.
+- Implemented HTTP Interceptor for JWT authentication.
+- Connected frontend with backend APIs.

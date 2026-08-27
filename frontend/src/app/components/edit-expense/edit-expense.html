@@ -1,0 +1,136 @@
+<div class="expense-form">
+
+  <h2>Edit Expense</h2>
+
+  @if (errorMessage()) {
+    <div class="error-message">
+      {{ errorMessage() }}
+    </div>
+  }
+
+  <form
+    [formGroup]="expenseForm"
+    (ngSubmit)="updateExpense()"
+  >
+
+    <div class="form-group">
+
+      <label>Title</label>
+
+      <input
+        type="text"
+        formControlName="title"
+        placeholder="Enter expense title"
+      >
+
+      @if (
+        expenseForm.controls.title.touched &&
+        expenseForm.controls.title.invalid
+      ) {
+        <small class="error">
+          Title is required
+        </small>
+      }
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label>Amount</label>
+
+      <input
+        type="number"
+        formControlName="amount"
+        placeholder="Enter amount"
+      >
+
+      @if (
+        expenseForm.controls.amount.touched &&
+        expenseForm.controls.amount.invalid
+      ) {
+        <small class="error">
+          Amount must be greater than 0
+        </small>
+      }
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label>Category</label>
+
+      <select formControlName="category">
+
+        <option value="">Select category</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Other">Other</option>
+
+      </select>
+
+      @if (
+        expenseForm.controls.category.touched &&
+        expenseForm.controls.category.invalid
+      ) {
+        <small class="error">
+          Category is required
+        </small>
+      }
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label>Description</label>
+
+      <textarea
+        formControlName="description"
+        placeholder="Enter description"
+      ></textarea>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label>Date</label>
+
+      <input
+        type="date"
+        formControlName="date"
+      >
+
+      @if (
+        expenseForm.controls.date.touched &&
+        expenseForm.controls.date.invalid
+      ) {
+        <small class="error">
+          Date is required
+        </small>
+      }
+
+    </div>
+
+
+    <button
+      type="submit"
+      [disabled]="isLoading()"
+    >
+
+      @if (isLoading()) {
+        Updating...
+      } @else {
+        Update Expense
+      }
+
+    </button>
+
+  </form>
+
+</div>

@@ -1,0 +1,231 @@
+<div class="dashboard">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <div class="logo">
+      <span class="logo-icon">₹</span>
+      <span>ExpenseTrack</span>
+    </div>
+
+    <nav>
+
+      <a class="nav-item active">
+        <span>⌂</span>
+        Dashboard
+      </a>
+
+      <a class="nav-item" (click)="goToExpenses()">
+        <span>▣</span>
+        Expenses
+      </a>
+
+    </nav>
+
+    <button class="logout-btn" (click)="logout()">
+      <span>↪</span>
+      Logout
+    </button>
+
+  </aside>
+
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Topbar -->
+    <header class="topbar">
+
+      <div>
+        <h1>Dashboard</h1>
+        <p>Track and manage your expenses</p>
+      </div>
+
+      <div class="user-profile">
+
+        <div class="avatar">
+
+          {{ currentUser()?.name?.charAt(0)?.toUpperCase() || 'U' }}
+
+        </div>
+
+        <div class="user-info">
+
+          <strong>
+            {{ currentUser()?.name || 'User' }}
+          </strong>
+
+          <small>
+            {{ currentUser()?.email || '' }}
+          </small>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- Summary Cards -->
+    <section class="summary-grid">
+
+      <div class="summary-card">
+
+        <div class="card-top">
+          <span>Total Expenses</span>
+          <div class="card-icon">₹</div>
+        </div>
+
+        <h2>₹{{ totalExpenses() }}</h2>
+
+        <p class="card-description">
+          Your total spending
+        </p>
+
+      </div>
+
+
+      <div class="summary-card">
+
+        <div class="card-top">
+          <span>This Month</span>
+          <div class="card-icon">◷</div>
+        </div>
+
+        <h2>₹{{ monthlyExpenses() }}</h2>
+
+        <p class="card-description">
+          Spending this month
+        </p>
+
+      </div>
+
+
+      <div class="summary-card">
+
+        <div class="card-top">
+          <span>Total Transactions</span>
+          <div class="card-icon">↗</div>
+        </div>
+
+        <h2>{{ totalTransactions() }}</h2>
+
+        <p class="card-description">
+          Expenses recorded
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Recent Expenses -->
+    <section class="content-card">
+
+      <div class="section-header">
+
+        <div>
+          <h2>Recent Expenses</h2>
+          <p>Your latest transactions</p>
+        </div>
+
+        <button class="add-btn" (click)="goToAddExpense()">
+          + Add Expense
+        </button>
+
+      </div>
+
+
+      @if (expenses().length === 0) {
+
+      @if (isLoading()) {
+
+      <div class="loading-state">
+
+        <div class="spinner"></div>
+
+        <p>Loading expenses...</p>
+
+      </div>
+
+      } @else if (expenses().length === 0) {
+
+      <div class="empty-state">
+
+        <div class="empty-icon">
+          ₹
+        </div>
+
+        <h3>No expenses yet</h3>
+
+        <p>
+          Start tracking your spending by adding
+          your first expense.
+        </p>
+
+        <button class="empty-btn" (click)="goToAddExpense()">
+          Add Your First Expense
+        </button>
+
+      </div>
+
+      }} @else {
+
+      <div class="expense-list">
+
+        @for (
+        expense of expenses();
+        track expense._id
+        ) {
+
+        <div class="expense-item">
+
+          <div class="expense-icon">
+            ₹
+          </div>
+
+          <div class="expense-details">
+
+            <h3>
+              {{ expense.title }}
+            </h3>
+
+            <span>
+              {{ expense.category }}
+            </span>
+
+          </div>
+
+          <div class="expense-date">
+            {{ expense.date | date:'dd MMM yyyy' }}
+          </div>
+
+          <strong class="expense-amount">
+            ₹{{ expense.amount }}
+          </strong>
+
+          <div class="expense-actions">
+
+            <button class="edit-btn" (click)="editExpense(expense._id)">
+              Edit
+            </button>
+
+            <button class="delete-btn" (click)="deleteExpense(expense._id)">
+              Delete
+            </button>
+
+          </div>
+
+        </div>
+
+        }
+
+      </div>
+
+      }
+
+    </section>
+
+  </main>
+
+</div>

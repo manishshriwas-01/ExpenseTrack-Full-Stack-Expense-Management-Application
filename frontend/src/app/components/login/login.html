@@ -1,0 +1,110 @@
+<div class="login-page">
+
+  <div class="login-left">
+
+    <h1>ExpenseTrack</h1>
+
+    <p class="tagline">
+      Track Smarter. Save Better.
+    </p>
+
+    <p class="description">
+      Manage your expenses, understand your spending habits
+      and achieve your financial goals.
+    </p>
+
+    <div class="illustration">
+      <div class="phone">📱</div>
+      <div class="coin">🪙</div>
+      <div class="card">💳</div>
+    </div>
+
+  </div>
+
+  <div class="login-right">
+
+    <div class="login-container">
+
+      <h2>Welcome Back 👋</h2>
+
+      <p class="subtitle">
+        Login to your account
+      </p>
+
+      <form
+        [formGroup]="loginForm"
+        (ngSubmit)="onSubmit()"
+      >
+
+        <div class="form-group">
+
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            placeholder="Enter your email"
+          />
+
+          @if (
+            loginForm.controls.email.touched &&
+            loginForm.controls.email.invalid
+          ) {
+            <small class="error-message">
+              Please enter a valid email.
+            </small>
+          }
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="password">
+            Password
+          </label>
+
+          <input
+            id="password"
+            type="password"
+            formControlName="password"
+            placeholder="Enter your password"
+          />
+
+          @if (
+            loginForm.controls.password.touched &&
+            loginForm.controls.password.invalid
+          ) {
+            <small class="error-message">
+              Password is required.
+            </small>
+          }
+
+        </div>
+
+        @if (errorMessage) {
+          <p class="server-error">
+            {{ errorMessage }}
+          </p>
+        }
+
+        <button type="submit">
+          Login
+        </button>
+
+      </form>
+
+      <p class="register-text">
+        Don't have an account?
+        <a routerLink="/register">
+          Sign up
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

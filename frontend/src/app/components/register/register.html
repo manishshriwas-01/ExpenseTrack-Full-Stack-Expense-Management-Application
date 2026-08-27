@@ -1,0 +1,148 @@
+<div class="register-page">
+
+  <div class="register-left">
+
+    <h1>ExpenseTrack</h1>
+
+    <p class="tagline">
+      Start Managing Your Money Better.
+    </p>
+
+    <p class="description">
+      Create your account and take control of your
+      daily expenses in one simple place.
+    </p>
+
+    <div class="illustration">
+      <div class="phone">📱</div>
+      <div class="coin">🪙</div>
+      <div class="card">💳</div>
+    </div>
+
+  </div>
+
+
+  <div class="register-right">
+
+    <div class="register-container">
+
+      <h2>Create Account ✨</h2>
+
+      <p class="subtitle">
+        Start tracking your expenses today
+      </p>
+
+
+      <form
+        [formGroup]="registerForm"
+        (ngSubmit)="onSubmit()"
+      >
+
+        <div class="form-group">
+
+          <label for="name">
+            Name
+          </label>
+
+          <input
+            id="name"
+            type="text"
+            formControlName="name"
+            placeholder="Enter your name"
+          />
+
+          @if (
+            registerForm.controls.name.touched &&
+            registerForm.controls.name.invalid
+          ) {
+            <small class="error-message">
+              Name is required.
+            </small>
+          }
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            placeholder="Enter your email"
+          />
+
+          @if (
+            registerForm.controls.email.touched &&
+            registerForm.controls.email.invalid
+          ) {
+            <small class="error-message">
+              Please enter a valid email.
+            </small>
+          }
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="password">
+            Password
+          </label>
+
+          <input
+            id="password"
+            type="password"
+            formControlName="password"
+            placeholder="Create a password"
+          />
+
+          @if (
+            registerForm.controls.password.touched &&
+            registerForm.controls.password.invalid
+          ) {
+            <small class="error-message">
+              Password is required.
+            </small>
+          }
+
+        </div>
+
+
+        @if (errorMessage) {
+          <p class="server-error">
+            {{ errorMessage }}
+          </p>
+        }
+
+
+        @if (successMessage) {
+          <p class="success-message">
+            {{ successMessage }}
+          </p>
+        }
+
+
+        <button type="submit">
+          Create Account
+        </button>
+
+      </form>
+
+
+      <p class="login-text">
+        Already have an account?
+        <a routerLink="/login">
+          Login
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

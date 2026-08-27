@@ -1,0 +1,253 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f8ff;
+  font-family: Arial, sans-serif;
+}
+
+.register-left {
+  width: 50%;
+  padding: 80px;
+  box-sizing: border-box;
+  background: linear-gradient(145deg, #f4f3ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-left h1 {
+  color: #4f46e5;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.description {
+  max-width: 420px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.illustration {
+  position: relative;
+  height: 260px;
+  margin-top: 40px;
+}
+
+.phone {
+  font-size: 150px;
+  position: absolute;
+  left: 100px;
+  top: 20px;
+}
+
+.coin {
+  font-size: 50px;
+  position: absolute;
+  left: 230px;
+  bottom: 20px;
+}
+
+.card {
+  font-size: 60px;
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
+
+.register-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.register-container h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #6366f1, #7c3aed);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.error-message,
+.server-error {
+  display: block;
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.success-message {
+  color: #16a34a;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 25px;
+  color: #666;
+}
+
+.login-text a {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+@media (max-width: 900px) {
+
+  .register-page {
+    flex-direction: column;
+  }
+
+  .register-left {
+    width: 100%;
+    padding: 50px 40px 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .description {
+    max-width: 600px;
+  }
+
+  .illustration {
+    height: 180px;
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  .phone {
+    font-size: 110px;
+    left: 90px;
+    top: 10px;
+  }
+
+  .coin {
+    font-size: 40px;
+    left: 200px;
+    bottom: 10px;
+  }
+
+  .card {
+    font-size: 50px;
+    left: 40px;
+    bottom: 20px;
+  }
+
+  .register-right {
+    width: 100%;
+    padding: 50px 40px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .register-left {
+    padding: 35px 20px 20px;
+  }
+
+  .register-left h1 {
+    font-size: 30px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .illustration {
+    height: 140px;
+    width: 230px;
+  }
+
+  .phone {
+    font-size: 80px;
+    left: 70px;
+    top: 10px;
+  }
+
+  .coin {
+    font-size: 30px;
+    left: 160px;
+    bottom: 5px;
+  }
+
+  .card {
+    font-size: 38px;
+    left: 25px;
+    bottom: 15px;
+  }
+
+  .register-right {
+    padding: 35px 20px;
+  }
+
+  .register-container h2 {
+    font-size: 26px;
+  }
+}

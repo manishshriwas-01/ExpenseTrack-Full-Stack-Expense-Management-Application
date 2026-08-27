@@ -1,0 +1,166 @@
+<div class="expenses-page">
+
+  <div class="page-header">
+
+    <div>
+      <h1>Expenses</h1>
+
+      <p>
+        View and manage all your expenses
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- Filters -->
+
+  <div class="filters">
+
+    <div class="search-box">
+
+      <span>⌕</span>
+
+      <input
+        type="text"
+        placeholder="Search expenses..."
+        (input)="updateSearch($event)"
+      >
+
+    </div>
+
+
+    <select
+      (change)="updateCategory($event)"
+    >
+
+      <option value="All">
+        All Categories
+      </option>
+
+      <option value="Food">
+        Food
+      </option>
+
+      <option value="Transport">
+        Transport
+      </option>
+
+      <option value="Shopping">
+        Shopping
+      </option>
+
+      <option value="Bills">
+        Bills
+      </option>
+
+      <option value="Entertainment">
+        Entertainment
+      </option>
+
+      <option value="Other">
+        Other
+      </option>
+
+    </select>
+
+
+    <select
+      (change)="updateSort($event)"
+    >
+
+      <option value="newest">
+        Newest First
+      </option>
+
+      <option value="oldest">
+        Oldest First
+      </option>
+
+      <option value="highest">
+        Highest Amount
+      </option>
+
+      <option value="lowest">
+        Lowest Amount
+      </option>
+
+    </select>
+
+  </div>
+
+
+  @if (isLoading()) {
+
+    <div class="loading">
+      Loading expenses...
+    </div>
+
+  }
+
+  @else if (errorMessage()) {
+
+    <div class="error">
+      {{ errorMessage() }}
+    </div>
+
+  }
+
+  @else if (filteredExpenses().length === 0) {
+
+    <div class="empty-state">
+
+      <h2>No expenses found</h2>
+
+      <p>
+        Try changing your search or filter.
+      </p>
+
+    </div>
+
+  }
+
+  @else {
+
+    <div class="expense-list">
+
+      @for (
+        expense of filteredExpenses();
+        track expense._id
+      ) {
+
+        <div class="expense-card">
+
+          <div class="expense-info">
+
+            <h3>
+              {{ expense.title }}
+            </h3>
+
+            <span>
+              {{ expense.category }}
+            </span>
+
+          </div>
+
+          <div class="expense-meta">
+
+            <small>
+              {{ expense.date | date:'dd MMM yyyy' }}
+            </small>
+
+            <strong>
+              ₹{{ expense.amount }}
+            </strong>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  }
+
+</div>
