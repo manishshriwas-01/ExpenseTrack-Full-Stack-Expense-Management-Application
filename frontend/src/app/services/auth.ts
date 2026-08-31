@@ -13,7 +13,7 @@ export class Auth {
 
   currentUser = signal<any | null>(null);
 
-  private apiUrl = 'http://localhost:3000/api/auth';
+  private apiUrl = 'https://expensetrack-full-stack-expense.onrender.com/api/auth';
 
   getCurrentUser() {
     return this.http.get<any>(
