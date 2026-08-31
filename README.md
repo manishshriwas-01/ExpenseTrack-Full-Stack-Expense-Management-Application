@@ -91,3 +91,16 @@ Today I worked on:
 - Added Functional AuthGuard for protected routes.
 - Implemented HTTP Interceptor for JWT authentication.
 - Connected frontend with backend APIs.
+
+## Day 4 — Capstone: Integrate & Polish
+
+Today I worked on:
+
+- Integrated the complete end-to-end authentication flow.
+- Added loading states for API operations.
+- Added error handling for failed API requests.
+- Implemented empty states for expenses.
+- Polished the Angular UI.
+- Fixed bugs and improved the overall user experience.
+- Tested the complete application flow from login to expense management.
+
