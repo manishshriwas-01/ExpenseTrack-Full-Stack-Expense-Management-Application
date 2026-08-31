@@ -104,3 +104,82 @@ Today I worked on:
 - Fixed bugs and improved the overall user experience.
 - Tested the complete application flow from login to expense management.
 
+
+##  Day 5 — Deployment & Final Testing
+
+Today I worked on deploying and testing the complete ExpenseTrack application.
+
+## Deployment
+
+* Deployed the Angular frontend on Render.
+* Deployed the Node.js/Express backend on Render.
+* Connected the frontend with the deployed backend API.
+* Configured the production API URL.
+* Tested the application after deployment.
+
+## Live Application
+
+### Frontend
+
+https://expensetrack-full-stack-expense-6bcn.onrender.com
+
+### Backend API
+
+https://expensetrack-full-stack-expense.onrender.com
+
+## Final Testing
+
+* User Registration
+* User Login
+* JWT Authentication
+* Protected Routes
+* Dashboard
+* Add Expense
+* View Expenses
+* Edit Expense
+* Delete Expense
+* Search & Filter
+* Logout
+* Current User Details
+* Loading / Error / Empty States
+
+## Screenshots
+
+### Login
+![Login Page](docs/login.png)
+
+### Register
+![Register Page](docs/register.png)
+
+### Dashboard
+![Dashboard](docs/dashboard.png)
+
+### Add Expense
+
+![Add Expense](docs/add%20expense.png)
+
+### Edit Expense
+
+![Edit Expense](docs/edit%20expense.png)
+
+### All Expenses
+
+![All Expenses](docs/expenses.png)
+
+### Search Expense
+
+![Search Expense](docs/search.png)
+
+### Filter Expense
+
+![Filter Expense](docs/filter.png)
+
+
+
+
+
+
+
+The ExpenseTrack application is successfully deployed and the complete end-to-end flow has been tested.
+
+
